@@ -1,7 +1,0 @@
-brew install fluidsynth
-download soundfont: http://www.schristiancollins.com/generaluser.php
-
-pip install --user mingus
-(learned that "sudo pip" is bad and makes things not work later, because of permissions issues. fixed by uninstalling and reinstalling the module)
-
-tutorial: http://bspaans.github.io/python-mingus/index.html
