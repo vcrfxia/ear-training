@@ -16,4 +16,3 @@ python chords.py
 python intervals.py
 ```
 Can optionally specify an argument, either "learn" or "quiz" to specify the mode. If none specified, defaults to "quiz".
->>>>>>> 9e69a51... add README.
