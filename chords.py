@@ -15,12 +15,11 @@ TRIAD_FUNCS = [chords.major_triad, chords.minor_triad, chords.diminished_triad, 
 SEVENTH_CHORD_NAMES = ['major', 'minor', 'diminished', 'minor-major', 'dominant', 'dominant flat-five (french augmented sixth)', 'augmented']
 SEVENTH_CHORD_FUNCS = [chords.major_seventh, chords.minor_seventh, chords.diminished_seventh, chords.minor_major_seventh, chords.dominant_seventh, chords.dominant_flat_five, chords.augmented_minor_seventh]
 
-def get_bar_from_chord(chord, size=3):
-	assert len(chord) == size
+def get_bar_from_chord(chord):
 	chord = make_ascending(chord)
 	# print chord
 
-	b = Bar()
+	b = Bar(meter=(len(chord) + 1, 4))
 	for n in chord:
 		b.place_notes(n, 4)  ## add quarter note
 	b.place_notes(chord, 4)
@@ -42,7 +41,7 @@ if __name__ == '__main__':
 		fs.play_Bar(get_bar_from_chord(TRIAD_FUNCS[choice](key)))
 
 	def play_seventh_chord(choice, key):
-		fs.play_Bar(get_bar_from_chord(SEVENTH_CHORD_FUNCS[choice](key), 4))
+		fs.play_Bar(get_bar_from_chord(SEVENTH_CHORD_FUNCS[choice](key)))
 
 	if SEVENTH_CHORD_FLAG in sys.argv:
 		chord_names = SEVENTH_CHORD_NAMES
