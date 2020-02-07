@@ -37,7 +37,7 @@ def quiz(option_names, play_func):
 		else:
 			print 'Whoops, ' + option_names[choice]
 
-ANSWER_INPUTS = ['p', '[', ']', ';', '\'']
+ANSWER_INPUTS = ['p', '[', ']', ';', '\'', '.', '/']
 def _get_intput_to_choice(num_answers):
 	lookup = {v:k for k,v in enumerate(ANSWER_INPUTS[:num_answers])}
 	def _input_to_choice(answer_input):

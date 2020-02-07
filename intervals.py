@@ -8,8 +8,8 @@ import mingus.core.intervals as intervals
 from utils import learn, quiz, make_ascending
 
 
-INTERVAL_NAMES = ['major third', 'minor third', 'major fifth']
-INTERVAL_FUNCS = [intervals.major_third, intervals.minor_third, intervals.major_fifth]
+INTERVAL_NAMES = ['major third', 'minor third', 'major fifth', 'major seventh', 'minor seventh']
+INTERVAL_FUNCS = [intervals.major_third, intervals.minor_third, intervals.major_fifth, intervals.major_seventh, intervals.minor_seventh]
 
 def get_bar_from_interval(interval):
 	assert len(interval) == 2
